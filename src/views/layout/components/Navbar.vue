@@ -1,24 +1,45 @@
 <template>
-  <el-menu class="navbar" mode="horizontal">
-    <hamburger :toggle-click="toggleSideBar" :is-active="sidebar.opened" class="hamburger-container"/>
-    <breadcrumb />
-    <el-dropdown class="avatar-container" trigger="click">
-      <div class="avatar-wrapper">
-        <img :src="avatar+'?imageView2/1/w/80/h/80'" class="user-avatar">
-        <i class="el-icon-caret-bottom"/>
-      </div>
-      <el-dropdown-menu slot="dropdown" class="user-dropdown">
-        <router-link class="inlineBlock" to="/">
-          <el-dropdown-item>
-            Home
-          </el-dropdown-item>
-        </router-link>
-        <el-dropdown-item divided>
-          <span style="display:block;" @click="logout">LogOut</span>
-        </el-dropdown-item>
-      </el-dropdown-menu>
-    </el-dropdown>
-  </el-menu>
+  <b-navbar toggleable="md" type="dark" variant="info">
+    <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+    <!-- <b-navbar-brand href="#">
+      <img width="35" height="35" src="@/assets/logo.png">
+    </b-navbar-brand>
+    <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+    <b-navbar-brand href="#">爱影聚合<b-badge>.online</b-badge></b-navbar-brand> -->
+    <b-collapse is-nav id="nav_collapse">
+    <b-navbar-nav>
+      <b-nav-item href="/#/">首页0</b-nav-item>
+      <b-nav-item href="/#/1">首页1</b-nav-item>
+      <b-nav-item href="/#/example">在线影城</b-nav-item>
+      <b-nav-item href="/#/form">免费会员</b-nav-item>
+      <b-nav-item href="/#/login">最近热门</b-nav-item>
+    </b-navbar-nav>
+  <!-- Right aligned nav items -->
+    <b-navbar-nav class="ml-auto">
+    <b-nav-form>
+      <b-form-input size="sm" class="mr-sm-2" type="text" placeholder="输入关键词"/>
+      <b-button size="sm" class="my-2 my-sm-0" type="submit">搜索</b-button>
+    </b-nav-form>
+
+    <!-- <b-nav-item-dropdown text="Lang" right>
+      <b-dropdown-item href="#">EN</b-dropdown-item>
+      <b-dropdown-item href="#">ES</b-dropdown-item>
+      <b-dropdown-item href="#">RU</b-dropdown-item>
+      <b-dropdown-item href="#">FA</b-dropdown-item>
+    </b-nav-item-dropdown> -->
+
+    <!-- <b-nav-item-dropdown right> -->
+      <!-- Using button-content slot -->
+      <!-- <template slot="button-content">
+        <em>User</em>
+      </template>
+      <b-dropdown-item href="#">Profile</b-dropdown-item>
+      <b-dropdown-item href="#">Signout</b-dropdown-item>
+    </b-nav-item-dropdown> -->
+  </b-navbar-nav>
+
+</b-collapse>
+</b-navbar>
 </template>
 
 <script>
@@ -51,45 +72,5 @@ export default {
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
-.navbar {
-  height: 50px;
-  line-height: 50px;
-  border-radius: 0px !important;
-  .hamburger-container {
-    line-height: 58px;
-    height: 50px;
-    float: left;
-    padding: 0 10px;
-  }
-  .screenfull {
-    position: absolute;
-    right: 90px;
-    top: 16px;
-    color: red;
-  }
-  .avatar-container {
-    height: 50px;
-    display: inline-block;
-    position: absolute;
-    right: 35px;
-    .avatar-wrapper {
-      cursor: pointer;
-      margin-top: 5px;
-      position: relative;
-      line-height: initial;
-      .user-avatar {
-        width: 40px;
-        height: 40px;
-        border-radius: 10px;
-      }
-      .el-icon-caret-bottom {
-        position: absolute;
-        right: -20px;
-        top: 25px;
-        font-size: 12px;
-      }
-    }
-  }
-}
-</style>
 
+</style>

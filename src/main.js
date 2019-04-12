@@ -2,20 +2,24 @@ import Vue from 'vue'
 
 import 'normalize.css/normalize.css' // A modern alternative to CSS resets
 
-import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css'
+// import ElementUI from 'element-ui'
+import BootstrapVue from 'bootstrap-vue'
+// import 'element-ui/lib/theme-chalk/index.css'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 import locale from 'element-ui/lib/locale/lang/en' // lang i18n
 
-import '@/styles/index.scss' // global css
+// import '@/styles/index.scss' // global css
 
 import App from './App'
 import router from './router'
 import store from './store'
 
 import '@/icons' // icon
-import '@/permission' // permission control
+// import '@/permission' // permission control
 
-Vue.use(ElementUI, { locale })
+// Vue.use(ElementUI, { locale })
+Vue.use(BootstrapVue);
 
 Vue.config.productionTip = false
 
